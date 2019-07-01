@@ -30,7 +30,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     animationController.forward();
     animationController.addListener(() {
       setState(() {});
-      print(animation.value);
+//      print(animation.value);
     });
   }
 
