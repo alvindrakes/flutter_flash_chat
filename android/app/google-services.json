@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "742332645249",
+    "firebase_url": "https://flutterflashchat.firebaseio.com",
+    "project_id": "flutterflashchat",
+    "storage_bucket": "flutterflashchat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:742332645249:android:597b99d47563e562",
+        "android_client_info": {
+          "package_name": "co.alvindrakes.flash_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "742332645249-54qlebr00p80vv974e5o0i04mdorcdtg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASSiz1DfIh_CYS-MvsEcHwvcgehDt1KtQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "742332645249-54qlebr00p80vv974e5o0i04mdorcdtg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

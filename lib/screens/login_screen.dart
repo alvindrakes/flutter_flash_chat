@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flash_chat/constants.dart';
 import 'package:flash_chat/components/rounded_button.dart';
+import 'chat_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   static const String id = 'login_screen';
@@ -50,10 +51,12 @@ class _LoginScreenState extends State<LoginScreen> {
             SizedBox(
               height: 24.0,
             ),
-            PaddingButton(
+            RoundedButton(
               btnColor: Colors.lightBlueAccent,
               btnText: 'Log in',
-              route: 'login_screen',
+              onPressed: () {
+                Navigator.pushNamed(context, ChatScreen.id);
+              },
             ),
           ],
         ),
