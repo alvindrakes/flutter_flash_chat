@@ -65,28 +65,30 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(
                 height: 24.0,
               ),
-              RoundedButton(
-                btnColor: Colors.lightBlueAccent,
-                btnText: 'Log in',
-                onPressed: () async {
-                  setState(() {
-                    showSpinner = true;
-                  });
-
-                  final loggedInUser = await _auth.signInWithEmailAndPassword(
-                      email: email, password: password);
-
-                  try {
-                    if (loggedInUser != null) {
-                      Navigator.pushNamed(context, ChatScreen.id);
-                    }
+              Flexible(
+                child: RoundedButton(
+                  btnColor: Colors.lightBlueAccent,
+                  btnText: 'Log in',
+                  onPressed: () async {
                     setState(() {
-                      showSpinner = false;
+                      showSpinner = true;
                     });
-                  } catch (e) {
-                    print(e);
-                  }
-                },
+
+                    final loggedInUser = await _auth.signInWithEmailAndPassword(
+                        email: email, password: password);
+
+                    try {
+                      if (loggedInUser != null) {
+                        Navigator.pushNamed(context, ChatScreen.id);
+                      }
+                      setState(() {
+                        showSpinner = false;
+                      });
+                    } catch (e) {
+                      print(e);
+                    }
+                  },
+                ),
               ),
             ],
           ),

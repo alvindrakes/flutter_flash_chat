@@ -65,29 +65,31 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               SizedBox(
                 height: 24.0,
               ),
-              RoundedButton(
-                btnColor: Colors.blueAccent,
-                btnText: 'Register',
-                onPressed: () async {
-                  setState(() {
-                    showSpinner = true; // spinner appear
-                  });
-
-                  final newUser = await _auth.createUserWithEmailAndPassword(
-                      email: email, password: password);
-
-                  // only move on if the new user is created successfully
-                  try {
-                    if (newUser != null) {
-                      Navigator.pushNamed(context, ChatScreen.id);
-                    }
+              Flexible(
+                child: RoundedButton(
+                  btnColor: Colors.blueAccent,
+                  btnText: 'Register',
+                  onPressed: () async {
                     setState(() {
-                      showSpinner = false; // disable spinner when done
+                      showSpinner = true; // spinner appear
                     });
-                  } catch (e) {
-                    print(e);
-                  }
-                },
+
+                    final newUser = await _auth.createUserWithEmailAndPassword(
+                        email: email, password: password);
+
+                    // only move on if the new user is created successfully
+                    try {
+                      if (newUser != null) {
+                        Navigator.pushNamed(context, ChatScreen.id);
+                      }
+                      setState(() {
+                        showSpinner = false; // disable spinner when done
+                      });
+                    } catch (e) {
+                      print(e);
+                    }
+                  },
+                ),
               ),
             ],
           ),
