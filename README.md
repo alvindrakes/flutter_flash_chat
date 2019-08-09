@@ -1,5 +1,5 @@
 
-# Flash Chat ⚡️
+# flutter_flash_chat ⚡️
 - a modern messaging app
 
 ## App functions
